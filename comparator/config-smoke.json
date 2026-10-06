@@ -1,0 +1,8 @@
+{
+  "challenge_module": "Audit.Smoke.Challenge",
+  "solution_module": "Audit.Smoke.Solution",
+  "theorem_names": ["two_mul_le"],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

@@ -12,3 +12,7 @@ rev = "666cda029098a1106914fc9fa7abd1727573284a"
 
 [[lean_lib]]
 name = "MarkovProcessPilot"
+
+[[lean_lib]]
+name = "Audit"
+globs = ["Audit.+"]
