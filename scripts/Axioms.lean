@@ -1,0 +1,12 @@
+import MarkovProcessPilot
+
+#print axioms MarkovProcessPilot.hasIndepIncrements_iff
+#print axioms MarkovProcessPilot.isBrownianReal_iff
+#print axioms MarkovProcessPilot.isBrownianReal_brownianMotion
+#print axioms MarkovProcessPilot.integral_eval_brownianMotion
+#print axioms MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo
+#print axioms MarkovProcessPilot.eval_exitTimeTrunc_mem_Icc
+#print axioms MarkovProcessPilot.ae_eval_zero_eq
+#print axioms MarkovProcessPilot.iteratedDeriv_two_cutId_eq_zero
+#check @MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo
+#check @MarkovProcessPilot.isBrownianReal_iff

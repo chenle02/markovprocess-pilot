@@ -1,0 +1,17 @@
+'MarkovProcessPilot.hasIndepIncrements_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.isBrownianReal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.isBrownianReal_brownianMotion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.integral_eval_brownianMotion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.eval_exitTimeTrunc_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.ae_eval_zero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.iteratedDeriv_two_cutId_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo : ∀ (a b x : ℝ),
+  a < x →
+    x < b →
+      ∀ (K : NNReal),
+        ∫ (ω : MarkovProcess.ContinuousPath ℝ),
+            ω (MarkovProcess.ContinuousPath.exitTimeTrunc (Set.Ioo a b) K ω) ∂MarkovProcess.brownianMotion x =
+          x
+@MarkovProcessPilot.isBrownianReal_iff : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] (X : NNReal → Ω → ℝ)
+  (P : MeasureTheory.Measure Ω), MarkovProcess.IsBrownianReal X P ↔ ProbabilityTheory.IsBrownianReal X P

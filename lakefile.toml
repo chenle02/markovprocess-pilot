@@ -1,0 +1,14 @@
+name = "MarkovProcessPilot"
+defaultTargets = ["MarkovProcessPilot"]
+
+[leanOptions]
+autoImplicit = false
+relaxedAutoImplicit = false
+
+[[require]]
+name = "MarkovProcess"
+git = "https://github.com/scottnarmstrong/MarkovProcess.git"
+rev = "666cda029098a1106914fc9fa7abd1727573284a"
+
+[[lean_lib]]
+name = "MarkovProcessPilot"
