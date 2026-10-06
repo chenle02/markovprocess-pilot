@@ -1,0 +1,25 @@
+schema: claims/1
+package: markovprocess-pilot
+claims:
+- id: markovprocess-pilot/exit-time-mean
+  decl: MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo
+  kind: theorem
+  summary: Brownian motion started at x in (a, b), stopped at its exit time from (a, b) truncated at K, has mean x.
+  aliases: [optional stopping for Brownian motion, exit time mean, stopped Brownian motion expectation]
+  keywords: [probability, brownian-motion, stopping-time, optional-stopping]
+  file: MarkovProcessPilot/BrownianExit.lean
+  status: reusable
+  superseded_by: null
+  citation: null
+  depends_on: []
+- id: markovprocess-pilot/brownian-is-brownian-real
+  decl: MarkovProcessPilot.isBrownianReal_brownianMotion
+  kind: theorem
+  summary: The MarkovProcess library's Brownian motion is Brownian in Mathlib's sense (IsBrownianReal after recentring).
+  aliases: [IsBrownianReal, library Brownian motion is Mathlib Brownian motion]
+  keywords: [probability, brownian-motion, mathlib-bridge]
+  file: MarkovProcessPilot/BrownianExit.lean
+  status: reusable
+  superseded_by: null
+  citation: null
+  depends_on: []
