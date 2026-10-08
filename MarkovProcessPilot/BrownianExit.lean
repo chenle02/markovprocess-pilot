@@ -1,5 +1,10 @@
 /-
 Copyright 2026 Le Chen. Released under the Apache 2.0 license (see LICENSE).
+
+`mem_of_lt_exitTimeTrunc` is adapted from Scott Armstrong's MarkovProcess
+(`MarkovProcess/Trajectory/DynkinStopping.lean`,
+https://github.com/scottnarmstrong/MarkovProcess), Copyright (c) 2026 Scott Armstrong,
+released under the Apache 2.0 license. Changes: specialised to `ℝ` and made public.
 -/
 module
 
@@ -144,8 +149,9 @@ def cutIdDeriv2C0 (a b : ℝ) (hab : a < b) : C₀(ℝ, ℝ) where
     rw [h]
     exact (hasCompactSupport_cutId a b hab).deriv.deriv.is_zero_at_infty
 
-/-- Strictly before the truncated exit time, the path is still inside `U` (a public copy of a
-private lemma of `MarkovProcess.Trajectory.DynkinStopping`). -/
+/-- Strictly before the truncated exit time, the path is still inside `U`. Adapted from Scott
+Armstrong's private lemma of the same name in `MarkovProcess.Trajectory.DynkinStopping`,
+specialised to `ℝ` and made public. -/
 theorem mem_of_lt_exitTimeTrunc (U : Set ℝ) (K : ℝ≥0)
     (ω : MarkovProcess.ContinuousPath ℝ) (t : ℝ≥0)
     (ht : t < MarkovProcess.ContinuousPath.exitTimeTrunc U K ω) : ω t ∈ U := by

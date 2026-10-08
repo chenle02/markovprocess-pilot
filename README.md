@@ -95,8 +95,8 @@ optional stopping.
 
 Helper results, all proved: `contDiff_cutId`, `hasCompactSupport_cutId`, `cutId_eq_self`,
 `iteratedDeriv_two_cutId_eq_zero`, `mem_of_lt_exitTimeTrunc`, `eval_exitTimeTrunc_mem_Icc`
-and `ae_eval_zero_eq`. `mem_of_lt_exitTimeTrunc` is a public copy, specialised to `ℝ`, of a
-`private` lemma in `MarkovProcess/Trajectory/DynkinStopping.lean`.
+and `ae_eval_zero_eq`. `mem_of_lt_exitTimeTrunc` is adapted, specialised to `ℝ` and made public, from Scott
+Armstrong's `private` lemma in `MarkovProcess/Trajectory/DynkinStopping.lean`.
 
 ## Axioms
 
@@ -187,10 +187,24 @@ The study expected "tens of minutes" for MarkovProcess. The real cost is about 3
 - Untruncated exit times. The library has `Trajectory/ExpectedExitTime.lean`
   (`ae_exitTime_lt_top`); with dominated convergence it would remove `K` and give the exit
   probability `P_x(exit at b) = (x - a)/(b - a)`. Not attempted.
-- No external kernel replay (`leanchecker` / comparator) was run. Only `#print axioms`.
-- No push and no GitHub repository: this is a local working checkout.
+
+## Evidence
+
+`.lean-receipts/` holds a lower-tier receipt (build, placeholder scan, `#print axioms`) and a
+comparator receipt for the commit that last changed the source: `lake comparator` checks that
+the Mathlib-only statement in `Audit/Exit/Challenge.lean` is exactly what
+`Audit/Exit/Solution.lean` proves, and replays the proof in the con-ron, NanoDa and Lean
+kernels. The package is listed in the [lean-pkg](https://github.com/lean-pkg/lean-pkg) index.
+
+## Citing
+
+This pilot is a thin layer over Scott Armstrong's MarkovProcess, which did the hard part
+(see above). If you use it, please cite MarkovProcess as its
+[`CITATION.cff`](https://github.com/scottnarmstrong/MarkovProcess/blob/main/CITATION.cff)
+asks.
 
 ## License
 
 Apache-2.0, see `LICENSE`. MarkovProcess (Apache-2.0, Scott Armstrong) and Mathlib
-(Apache-2.0) are dependencies, not vendored.
+(Apache-2.0) are dependencies, not vendored, except one lemma adapted from MarkovProcess
+(`mem_of_lt_exitTimeTrunc`; its notice is in `MarkovProcessPilot/BrownianExit.lean`).
