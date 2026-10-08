@@ -1,0 +1,23 @@
+Current branch: HEAD
+Using cache from origin: (some leanprover-community/mathlib4)
+No files to download
+Already decompressed 8915 file(s)
+Resolving dependencies
+Building Audit.Smoke.Challenge
+⚠ [8931/8931] Replayed Audit.Smoke.Challenge
+warning: Audit/Smoke/Challenge.lean:5:8: declaration uses `sorry`
+Build completed successfully (8931 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, two_mul_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Audit.Smoke.Challenge
+Building Audit.Smoke.Solution
+Build completed successfully (8931 jobs).
+Exporting #[Quot, Quot.mk, Quot.lift, Quot.ind, two_mul_le, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce, Nat, String, String.mk, Char, optParam, autoParam, semiOutParam, outParam] from Audit.Smoke.Solution
+Running con-ron kernel on solution
+con-ron: accepted 1319 declarations (--verified)
+con-ron kernel accepts the solution
+Running nanoda kernel on solution
+nanoda kernel accepts the solution
+Running Lean default kernel on solution
+Lean default kernel accepts the solution
+Your solution is okay!
+
+con-ron: 1 inductive blocks modelled in-process: Lean.Syntax (30 generated records, checked by the fold as declarations and not counted as records of the file)
