@@ -1,0 +1,48 @@
+name: Lean CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build, audit and axioms
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Reject placeholders in production modules
+        # Audit/*/Challenge.lean contain `sorry` by design (comparator challenges).
+        shell: bash
+        run: |
+          if grep -rnE 'sorry|admit|axiom |native_decide' MarkovProcessPilot.lean MarkovProcessPilot/; then
+            echo "placeholder or custom axiom found" >&2
+            exit 1
+          fi
+
+      - uses: leanprover/lean-action@f061402b660e0c34644504b324e830f2991d4865 # v1.6.1
+        with:
+          build: true
+          use-mathlib-cache: true
+
+      - name: Build the comparator audit
+        run: lake build Audit
+
+      - name: Axioms match the recorded log
+        shell: bash
+        run: |
+          lake env lean scripts/Axioms.lean | tee axioms-ci.txt
+          diff -u logs/axioms.txt axioms-ci.txt

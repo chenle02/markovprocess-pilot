@@ -1,0 +1,34 @@
+name: Build or proof problem
+description: Report a build failure, a wrong axiom list, or a mismatch between the Lean source and what the documentation claims.
+title: "[Build]: "
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Paste the command you ran and the relevant output.
+      render: text
+    validations:
+      required: true
+  - type: input
+    id: commit
+    attributes:
+      label: Commit
+      description: Output of `git rev-parse HEAD`.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Output of `lean --version` and `lake --version`, operating system, and whether `lake exe cache get` succeeded.
+      render: text
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: I checked that the problem is in this pilot, not in MarkovProcess or Mathlib (those have their own trackers).
+          required: false

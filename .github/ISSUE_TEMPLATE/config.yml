@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: MarkovProcess library (Scott Armstrong)
+    url: https://github.com/scottnarmstrong/MarkovProcess/issues
+    about: Problems in the underlying MarkovProcess library belong in its own tracker.

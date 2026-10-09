@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+message: >-
+  This pilot is a thin layer over Scott Armstrong's MarkovProcess library,
+  which did the hard part. If you use it, please cite MarkovProcess (the
+  preferred citation below). To refer to the pilot itself, cite this
+  repository at commit 05d99d75df8235e79902220f0fe13e07e81867ca, the commit
+  its receipts cover; there is no tagged release.
+type: software
+title: "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time"
+abstract: >-
+  A small Lean 4 project built on Scott Armstrong's MarkovProcess library. It
+  proves that Brownian motion started at x in (a, b), stopped at its exit time
+  from (a, b) truncated at a deterministic horizon K, has mean x, and that
+  MarkovProcess.IsBrownianReal is equivalent to Mathlib's
+  ProbabilityTheory.IsBrownianReal.
+authors:
+  - family-names: Chen
+    given-names: Le
+    affiliation: "Department of Mathematics and Statistics, Auburn University"
+repository-code: "https://github.com/chenle02/markovprocess-pilot"
+license: Apache-2.0
+commit: 05d99d75df8235e79902220f0fe13e07e81867ca
+keywords:
+  - Lean
+  - mathlib
+  - formal verification
+  - Brownian motion
+  - optional stopping
+  - exit time
+preferred-citation:
+  type: software
+  title: "MarkovProcess: sub-Markov kernel semigroups and continuous-path Markov processes in Lean 4"
+  authors:
+    - family-names: Armstrong
+      given-names: Scott
+  repository-code: "https://github.com/scottnarmstrong/MarkovProcess"
+  url: "https://github.com/scottnarmstrong/MarkovProcess"
+  license: Apache-2.0

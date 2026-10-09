@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 330" width="640" height="330" role="img" aria-labelledby="title desc" font-family="system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+  <title id="title">Brownian path stopped at its truncated exit time</title>
+  <desc id="desc">Time runs to the right. Two horizontal lines mark the levels a (bottom) and b (top). A jagged path starts at level x between them at time 0 and is stopped at time T, the first time it touches level b, which comes before the dashed vertical line at the horizon K. T equals the exit time from the open interval (a, b), capped at K. The theorem says the expected stopped position equals x.</desc>
+  <rect width="640" height="330" rx="16" fill="#ffffff"/>
+  <rect x="1" y="1" width="638" height="328" rx="15" fill="none" stroke="#c7d2fe" stroke-width="2"/>
+  <!-- axes -->
+  <line x1="70" y1="250" x2="600" y2="250" stroke="#334155" stroke-width="2"/>
+  <path d="M600 250 l-10 -5 v10 z" fill="#334155"/>
+  <text x="604" y="276" font-size="16" fill="#1e293b" text-anchor="end">time</text>
+  <!-- barriers -->
+  <line x1="70" y1="70" x2="580" y2="70" stroke="#3730a3" stroke-width="3"/>
+  <line x1="70" y1="210" x2="580" y2="210" stroke="#3730a3" stroke-width="3"/>
+  <text x="58" y="76" font-size="20" font-style="italic" fill="#1e1b4b" text-anchor="end">b</text>
+  <text x="58" y="216" font-size="20" font-style="italic" fill="#1e1b4b" text-anchor="end">a</text>
+  <text x="58" y="161" font-size="20" font-style="italic" fill="#1e1b4b" text-anchor="end">x</text>
+  <!-- horizon K -->
+  <line x1="520" y1="44" x2="520" y2="250" stroke="#475569" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="520" y="276" font-size="18" font-style="italic" fill="#1e293b" text-anchor="middle">K</text>
+  <!-- path -->
+  <path d="M70 155 L84 140 L96 166 L110 148 L124 176 L138 160 L152 188 L166 170 L180 194 L194 172 L208 182 L222 150 L236 162 L250 132 L264 146 L278 118 L292 134 L306 104 L320 122 L334 98 L348 112 L362 86 L376 100 L390 70" fill="none" stroke="#b45309" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+  <circle cx="70" cy="155" r="6" fill="#ffffff" stroke="#1e1b4b" stroke-width="2.5"/>
+  <circle cx="390" cy="70" r="8" fill="#b45309" stroke="#ffffff" stroke-width="2.5"/>
+  <!-- T marker -->
+  <line x1="390" y1="78" x2="390" y2="250" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3 4"/>
+  <text x="390" y="276" font-size="18" font-style="italic" fill="#1e293b" text-anchor="middle">T</text>
+  <text x="130" y="50" font-size="15" fill="#1e293b">stopped at T = min(exit time from (a, b), K)</text>
+  <text x="320" y="312" font-size="16" fill="#1e293b" text-anchor="middle">Under the law of Brownian motion started at x, the mean of the path at T is x.</text>
+</svg>
