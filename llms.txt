@@ -1,0 +1,27 @@
+# MarkovProcess consumer pilot
+
+> A small Lean 4 project built on Scott Armstrong's MarkovProcess library (https://github.com/scottnarmstrong/MarkovProcess), which supplies the Brownian motion, exit times, heat generator, optional stopping and Dynkin's formula. The pilot adds about 250 lines. Headline theorem `MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo`: for `a < x < b` and every `K : ℝ≥0`, the integral of `ω (exitTimeTrunc (Set.Ioo a b) K ω)` against `MarkovProcess.brownianMotion x` equals `x`. Bridge `MarkovProcessPilot.isBrownianReal_iff`: `MarkovProcess.IsBrownianReal X P ↔ ProbabilityTheory.IsBrownianReal X P` for every `X` and `P`. The exit time is truncated at `K`; untruncated exit times and the exit probability are not proved. Lean `v4.35.0-rc2`, Mathlib `065356127b1d`, MarkovProcess `666cda029098`. Lower-tier and comparator receipts (toolchain mechanism; con-ron, NanoDa and Lean kernels) are bound to commit `05d99d75df8235e79902220f0fe13e07e81867ca`. This is a pilot, not a general library; credit MarkovProcess for the underlying theory.
+
+## Essential
+
+- [README](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/README.md): Result, scope, status and quick start.
+- [Repository contract](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/AGENTS.md): Which files are bound to receipts, and the rules for changes.
+- [Machine-readable claims](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/claims.yaml): The two claimed theorems (schema claims/1).
+- [Proof outline](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/docs/proof-outline.md): Dynkin's formula route, the comparator statement, and what came from MarkovProcess.
+
+## Source at the receipted commit
+
+- [BrownianExit.lean](https://github.com/chenle02/markovprocess-pilot/blob/05d99d75df8235e79902220f0fe13e07e81867ca/MarkovProcessPilot/BrownianExit.lean): The bridge, the test function and the exit-time theorem.
+- [Comparator challenge](https://github.com/chenle02/markovprocess-pilot/blob/05d99d75df8235e79902220f0fe13e07e81867ca/Audit/Exit/Challenge.lean): Theorem `exit_mean`, stated with Mathlib only.
+- [Comparator solution](https://github.com/chenle02/markovprocess-pilot/blob/05d99d75df8235e79902220f0fe13e07e81867ca/Audit/Exit/Solution.lean): Proves `exit_mean` from the pilot theorem.
+- [lakefile.toml](https://github.com/chenle02/markovprocess-pilot/blob/05d99d75df8235e79902220f0fe13e07e81867ca/lakefile.toml): Single `require` on MarkovProcess at a pinned commit.
+
+## Verification
+
+- [Reproducing and evidence](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/docs/reproducing.md): Pins, build commands, build cost, axioms and receipts.
+- [Comparator receipt](https://github.com/chenle02/markovprocess-pilot/blob/main/.lean-receipts/05d99d75df82-comparator.json): Result `pass` for `exit_mean` and the smoke test.
+
+## Optional
+
+- [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess): The library this pilot depends on, by Scott Armstrong.
+- [MarkovProcess citation](https://github.com/scottnarmstrong/MarkovProcess/blob/main/CITATION.cff): How to cite the library.

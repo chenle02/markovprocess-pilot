@@ -1,0 +1,30 @@
+name: Documentation problem
+description: Report unclear, stale, inaccessible, or overstated documentation.
+title: "[Docs]: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Page or file
+      description: Link the file and heading.
+      placeholder: "README.md#the-result"
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong or hard to use?
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: Proposed correction
+      description: If it concerns mathematics, cite the Lean declaration it should match.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: My correction does not claim more than the Lean source proves (for example, untruncated exit times).
+          required: true
