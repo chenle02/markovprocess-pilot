@@ -110,18 +110,17 @@ build: about 3.5 minutes on 4 cores and 1.5 GB peak memory per process
 
 ## Repository map
 
-```text
-MarkovProcessPilot/BrownianExit.lean   the bridge and the exit-time theorem (namespace MarkovProcessPilot)
-MarkovProcessPilot.lean                umbrella import
-Audit/Exit/{Challenge,Solution}.lean   comparator statement (Mathlib only) and its proof
-Audit/Smoke/                           comparator smoke test on a trivial statement
-comparator/                            comparator configurations
-scripts/Axioms.lean                    #print axioms for the main declarations
-.lean-receipts/                        lower-tier and comparator receipts, bound to source commits
-claims.yaml                            machine-readable claims (schema claims/1)
-logs/                                  build, cache and axiom logs
-docs/                                  proof outline, reproduction notes, images
-```
+| Path | Contents |
+|---|---|
+| [`MarkovProcessPilot/BrownianExit.lean`](MarkovProcessPilot/BrownianExit.lean) | the bridge and the exit-time theorem |
+| [`MarkovProcessPilot.lean`](MarkovProcessPilot.lean) | umbrella import |
+| [`Audit/Exit/`](Audit/Exit/) | comparator statement (Mathlib only) and its proof |
+| [`Audit/Smoke/`](Audit/Smoke/), [`comparator/`](comparator/) | comparator smoke test and configurations |
+| [`scripts/Axioms.lean`](scripts/Axioms.lean) | `#print axioms` for the main declarations |
+| [`.lean-receipts/`](.lean-receipts/) | lower-tier and comparator receipts, bound to source commits |
+| [`claims.yaml`](claims.yaml) | machine-readable claims (schema `claims/1`) |
+| [`logs/`](logs/) | build, cache and axiom logs |
+| [`docs/`](docs/) | proof outline, reproduction notes, images |
 
 ## Citing
 
