@@ -13,20 +13,20 @@ is in `README.md`, and keep Armstrong's notice in
 ## Authority order
 
 1. The Lean source (`MarkovProcessPilot/`, `Audit/`) at commit
-   `05d99d75df8235e79902220f0fe13e07e81867ca`, and its receipts in
+   `1548828e63c86f2c3f360ac46ab91ec78ba45276`, and its receipts in
    `.lean-receipts/`.
 2. `claims.yaml`.
 3. `README.md`, `docs/`, `llms.txt`: presentation; they must agree with 1 and 2.
 
 ## Files bound to receipts
 
-The receipts cover the source at `05d99d75df82`. Changing any of these
+The receipts cover the source at `1548828e63c8`. Changing any of these
 requires a fresh build, a fresh comparator run and new receipts in the same
 pull request:
 
 - `MarkovProcessPilot.lean`, `MarkovProcessPilot/`, `Audit/`, `scripts/*.lean`
 - `lakefile.toml`, `lake-manifest.json`, `lean-toolchain`
-- `comparator/`, `claims.yaml`
+- `comparator/`, `claims.yaml`, `verify.sh`
 
 Never edit `.lean-receipts/` or `logs/` by hand.
 

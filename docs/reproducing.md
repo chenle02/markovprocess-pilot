@@ -73,36 +73,53 @@ with a placeholder proof, and the matching `Solution.lean` proves it.)
 ## Receipts
 
 [`.lean-receipts/`](../.lean-receipts/) holds two kinds of receipt for commit
-[`05d99d75df82`](https://github.com/chenle02/markovprocess-pilot/tree/05d99d75df8235e79902220f0fe13e07e81867ca),
-the commit that last changed the Lean source:
+[`1548828e63c8`](https://github.com/chenle02/markovprocess-pilot/tree/1548828e63c86f2c3f360ac46ab91ec78ba45276),
+the commit that last changed the Lean source, the comparator configurations or
+`claims.yaml`. Both were made with lean-pkg 0.14.0:
 
-- **Lower tier** (`05d99d75df82-*-pilot.json` and its `-lower-report.txt`):
-  `lake build`, `lake build Audit`, a placeholder scan and `#print axioms`, at
+- **Lower tier** (`1548828e63c8-systemd-user-markovprocess-pilot-verify.service-*.json`
+  and its `-verify.redacted.log`): [`verify.sh`](../verify.sh), run by
+  `lean-pkg receipt systemd --run` in a capped systemd user unit on a lab
+  workstation (the host appears only as a hashed label): a fresh build of
+  `MarkovProcessPilot` and every comparator Solution, `#print axioms` for the
+  main declarations ([`scripts/Axioms.lean`](../scripts/Axioms.lean)) and the
+  axioms of every claim in `claims.yaml`, read from the built environment, at
   Lean `v4.35.0-rc2` and Mathlib `065356127b1d`. Result: 0 `sorry`, axioms
   `propext`, `Classical.choice`, `Quot.sound`.
-- **Comparator** (`05d99d75df82-comparator.json` and its two logs):
-  `lake comparator`, toolchain mechanism, Lean `v4.35.0-rc2`. For
-  [`comparator/config-exit.json`](../comparator/config-exit.json) it checks
-  that the Mathlib-only statement `exit_mean` in
-  [`Audit/Exit/Challenge.lean`](../Audit/Exit/Challenge.lean) is exactly what
-  [`Audit/Exit/Solution.lean`](../Audit/Exit/Solution.lean) proves, with only
-  the permitted axioms, and replays the proof in the con-ron, NanoDa and Lean
-  kernels. [`comparator/config-smoke.json`](../comparator/config-smoke.json)
-  is a smoke test of the same machinery on a trivial statement
-  (`two_mul_le`). Both results: `pass`.
+- **Comparator** (`1548828e63c8-comparator.json` and its three logs):
+  `lake comparator`, toolchain mechanism, Lean `v4.35.0-rc2`. Each check
+  confirms that a Mathlib-only Challenge statement is exactly what its Solution
+  proves, with only the permitted axioms, and replays the proof in the
+  con-ron, NanoDa and Lean kernels:
+  - [`comparator/config-exit.json`](../comparator/config-exit.json): `exit_mean`
+    in [`Audit/Exit/Challenge.lean`](../Audit/Exit/Challenge.lean), which
+    judges the headline claim;
+  - [`comparator/config-brownian-kernel.json`](../comparator/config-brownian-kernel.json):
+    `exists_unique_brownian_kernel` in
+    [`Audit/BrownianKernel/Challenge.lean`](../Audit/BrownianKernel/Challenge.lean),
+    which judges the bridge claim. A Mathlib-only statement cannot name the
+    library's kernel, so this Challenge says that exactly one Markov kernel is
+    Brownian at every starting point, which is stronger than the claim; the
+    Solution uses `MarkovProcess.brownianMotion` as the witness;
+  - [`comparator/config-smoke.json`](../comparator/config-smoke.json): a smoke
+    test of the same machinery on a trivial statement (`two_mul_le`).
+
+  All three results: `pass`. `claims.yaml` names the Challenge theorem that
+  judges each claim (`judged_as`).
 
 The receipts are bound to that commit. Later commits that touch only
 documentation, images or repository metadata do not change what was checked;
-any change to the Lean source, `lakefile.toml`, `lake-manifest.json` or
-`lean-toolchain` would need fresh receipts.
+any change to the Lean source, `lakefile.toml`, `lake-manifest.json`,
+`lean-toolchain`, `comparator/`, `claims.yaml` or `verify.sh` would need fresh
+receipts.
 
-The older `9bb873e7aa31-*` receipts cover the previous source commit, which
-differed only in attribution comments in `BrownianExit.lean` (the file header
-and one docstring).
+The older `05d99d75df82-*` and `9bb873e7aa31-*` receipts cover earlier source
+commits: `05d99d75df82` judged only the headline claim, and `9bb873e7aa31` differed
+from it only in attribution comments in `BrownianExit.lean`.
 
 ## Index listing
 
 The package is listed in the lean-pkg package index at the pin
-`05d99d75df82`, with trust level `comparator` and headline
+`1548828e63c8`, with trust level `comparator` and headline
 `MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo`. The index repository may
 not be publicly readable; the receipts in this repository are self-contained.

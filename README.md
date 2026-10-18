@@ -85,7 +85,7 @@ Challenge theorem that judges each claim (`judged_as`).
 | Placeholders | no `sorry`, `admit`, custom `axiom` or `native_decide` in `MarkovProcessPilot/` |
 | Axioms | `propext`, `Classical.choice`, `Quot.sound` only ([`logs/axioms.txt`](logs/axioms.txt)) |
 | Comparator | `pass`, toolchain mechanism; con-ron, NanoDa and Lean kernels |
-| Receipts | [`.lean-receipts/`](.lean-receipts/), bound to commit [`05d99d75df82`](https://github.com/chenle02/markovprocess-pilot/tree/05d99d75df8235e79902220f0fe13e07e81867ca) |
+| Receipts | [`.lean-receipts/`](.lean-receipts/), bound to commit [`1548828e63c8`](https://github.com/chenle02/markovprocess-pilot/tree/1548828e63c86f2c3f360ac46ab91ec78ba45276) |
 | Index | listed in the lean-pkg package index at that pin, trust level `comparator` |
 
 ## Quick start
@@ -138,7 +138,7 @@ hard part. If you use it, please cite **MarkovProcess** as its
 asks. This repository's [`CITATION.cff`](CITATION.cff) names MarkovProcess as
 the preferred citation, so GitHub's "Cite this repository" button shows it.
 To refer to the pilot itself, cite the repository URL together with commit
-`05d99d75df82`, the commit its receipts cover; there is no tagged release.
+`1548828e63c8`, the commit its receipts cover; there is no tagged release.
 
 ## Support
 

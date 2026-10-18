@@ -3,7 +3,7 @@ message: >-
   This pilot is a thin layer over Scott Armstrong's MarkovProcess library,
   which did the hard part. If you use it, please cite MarkovProcess (the
   preferred citation below). To refer to the pilot itself, cite this
-  repository at commit 05d99d75df8235e79902220f0fe13e07e81867ca, the commit
+  repository at commit 1548828e63c86f2c3f360ac46ab91ec78ba45276, the commit
   its receipts cover; there is no tagged release.
 type: software
 title: "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time"
@@ -19,7 +19,7 @@ authors:
     affiliation: "Department of Mathematics and Statistics, Auburn University"
 repository-code: "https://github.com/chenle02/markovprocess-pilot"
 license: Apache-2.0
-commit: 05d99d75df8235e79902220f0fe13e07e81867ca
+commit: 1548828e63c86f2c3f360ac46ab91ec78ba45276
 keywords:
   - Lean
   - mathlib
