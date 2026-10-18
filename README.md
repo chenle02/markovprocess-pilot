@@ -25,15 +25,25 @@
 </div>
 
 > [!NOTE]
-> **Credit.** This pilot is a thin consumer of Scott Armstrong's
-> [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess), which did
-> the heavy lifting: the canonical Brownian motion, exit times, the heat
-> generator, Feller regularity, continuous-time optional stopping and
-> Dynkin's formula. This repository adds about 250 lines on top (a bridge to
-> Mathlib's Brownian motion, a test function and the final assembly), and one
-> helper lemma is adapted from MarkovProcess with Armstrong's copyright notice.
-> It is a pilot, not a general library. If you use it, please
+> **Credit: almost all of this is Scott Armstrong's work.** This pilot is a
+> thin consumer of Armstrong's
+> [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess)
+> (Apache-2.0), which did the heavy lifting. If you use the pilot, please
 > [cite MarkovProcess](#citing).
+>
+> **MarkovProcess supplies:** the canonical Brownian motion
+> (`MarkovProcess.brownianMotion`) and its uniqueness; exit times and their
+> truncations as stopping times; the heat generator `½ d²` and its domain;
+> Feller and Kolmogorov regularity of the heat semigroup; continuous-time
+> optional stopping; and Dynkin's formula at a bounded stopping time, the
+> expensive part.
+>
+> **The pilot adds (about 250 lines):** a two-way bridge to Mathlib's
+> `IsBrownianReal`, a smooth test function equal to the identity near
+> `[a, b]`, two pathwise facts about the exit time, and the final assembly.
+> One helper lemma (`mem_of_lt_exitTimeTrunc`) is adapted from MarkovProcess,
+> with Armstrong's copyright notice and a statement of the changes. It is a
+> pilot, not a general library, and not a new theorem.
 
 ## The result
 
@@ -135,10 +145,26 @@ build: about 3.5 minutes on 4 cores and 1.5 GB peak memory per process
 This pilot is a thin layer over Scott Armstrong's MarkovProcess, which did the
 hard part. If you use it, please cite **MarkovProcess** as its
 [`CITATION.cff`](https://github.com/scottnarmstrong/MarkovProcess/blob/main/CITATION.cff)
-asks. This repository's [`CITATION.cff`](CITATION.cff) names MarkovProcess as
-the preferred citation, so GitHub's "Cite this repository" button shows it.
-To refer to the pilot itself, cite the repository URL together with commit
-`1548828e63c8`, the commit its receipts cover; there is no tagged release.
+asks:
+
+> Scott Armstrong. *MarkovProcess: sub-Markov kernel semigroups and
+> continuous-path Markov processes in Lean 4.* Software, Apache-2.0.
+> <https://github.com/scottnarmstrong/MarkovProcess>
+
+This repository's [`CITATION.cff`](CITATION.cff) names MarkovProcess as the
+preferred citation, so GitHub's "Cite this repository" button shows it, and
+lists it under `references` at the pinned commit `666cda029098`. To refer to
+the pilot itself, cite release
+[`v0.1.0`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.0); its
+Lean source is the source at commit `1548828e63c8` that the receipts cover
+(`v0.1.0` changes documentation only).
+
+## Acknowledgments
+
+The mathematics formalised here, and nearly all of the Lean, come from Scott
+Armstrong's [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess).
+Mathlib supplies the Brownian-motion API used by the bridge.
+Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)); the receipts were made with lean-pkg 0.14.0 ([doi:10.5281/zenodo.23445755](https://doi.org/10.5281/zenodo.23445755)).
 
 ## Support
 

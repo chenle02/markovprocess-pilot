@@ -1,10 +1,12 @@
 cff-version: 1.2.0
 message: >-
   This pilot is a thin layer over Scott Armstrong's MarkovProcess library,
-  which did the hard part. If you use it, please cite MarkovProcess (the
-  preferred citation below). To refer to the pilot itself, cite this
-  repository at commit 1548828e63c86f2c3f360ac46ab91ec78ba45276, the commit
-  its receipts cover; there is no tagged release.
+  which did the hard part: the Brownian motion, exit times, the heat
+  generator, optional stopping and Dynkin's formula. If you use it, please
+  cite MarkovProcess (the preferred citation below). To refer to the pilot
+  itself, cite release v0.1.0 of this repository; its Lean source is the
+  source at commit 1548828e63c86f2c3f360ac46ab91ec78ba45276 that the receipts
+  cover (v0.1.0 changes documentation only).
 type: software
 title: "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time"
 abstract: >-
@@ -17,9 +19,11 @@ authors:
   - family-names: Chen
     given-names: Le
     affiliation: "Department of Mathematics and Statistics, Auburn University"
+version: "0.1.0"
+date-released: "2026-10-18"
+commit: 6d9e1537036cb81f710aba1ada3aa97289a91f00
 repository-code: "https://github.com/chenle02/markovprocess-pilot"
 license: Apache-2.0
-commit: 1548828e63c86f2c3f360ac46ab91ec78ba45276
 keywords:
   - Lean
   - mathlib
@@ -33,6 +37,44 @@ preferred-citation:
   authors:
     - family-names: Armstrong
       given-names: Scott
-  repository-code: "https://github.com/scottnarmstrong/MarkovProcess"
-  url: "https://github.com/scottnarmstrong/MarkovProcess"
+  abstract: >-
+    A machine-checked Lean 4 / mathlib library of sub-Markov transition semigroups, Feller
+    semigroups, and the continuous-path Markov processes they generate: existence and
+    uniqueness of the process for every starting point, the Markov and strong Markov
+    properties, generators and Dynkin's formula, optional stopping and exit times, the
+    killed process, equivariance, and processes in a measurable random environment. The
+    development contains no sorry and no custom axiom.
+  keywords:
+    - Lean
+    - mathlib
+    - formal verification
+    - Markov processes
+    - Feller semigroups
+    - strong Markov property
+    - stochastic processes
   license: Apache-2.0
+  repository-code: "https://github.com/scottnarmstrong/MarkovProcess"
+references:
+  - type: software
+    title: "MarkovProcess: sub-Markov kernel semigroups and continuous-path Markov processes in Lean 4"
+    authors:
+      - family-names: Armstrong
+        given-names: Scott
+    license: Apache-2.0
+    repository-code: "https://github.com/scottnarmstrong/MarkovProcess"
+    commit: 666cda029098a1106914fc9fa7abd1727573284a
+    notes: >-
+      The library this pilot depends on, at the commit pinned in
+      lake-manifest.json. One helper lemma (mem_of_lt_exitTimeTrunc) is
+      adapted from it, with Armstrong's copyright notice.
+  - type: software
+    title: "lean-pkg: a registry and trust gate for Lean 4 formalization packages"
+    authors:
+      - family-names: Chen
+        given-names: Le
+    version: "0.14.0"
+    doi: 10.5281/zenodo.23445755
+    repository-code: "https://github.com/lean-pkg/lean-pkg"
+    notes: >-
+      Tool used to develop and verify the pilot and to make its receipts
+      (concept DOI 10.5281/zenodo.23272098).

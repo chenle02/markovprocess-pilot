@@ -1,0 +1,47 @@
+{
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "Apache-2.0",
+  "title": "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time",
+  "creators": [
+    {
+      "name": "Chen, Le",
+      "affiliation": "Department of Mathematics and Statistics, Auburn University"
+    }
+  ],
+  "description": "<p>A small Lean 4 project built on Scott Armstrong's <a href=\"https://github.com/scottnarmstrong/MarkovProcess\">MarkovProcess</a> library (Apache-2.0), which did the hard part. MarkovProcess supplies the canonical Brownian motion, exit times, the heat generator and its domain, Feller regularity of the heat semigroup, continuous-time optional stopping and Dynkin's formula at a bounded stopping time. This pilot adds about 250 lines on top: a two-way bridge between <code>MarkovProcess.IsBrownianReal</code> and Mathlib's <code>ProbabilityTheory.IsBrownianReal</code>, a smooth test function, and the final assembly showing that Brownian motion started at x in (a, b), stopped at its exit time from (a, b) truncated at a deterministic horizon K, has mean x. One helper lemma (<code>mem_of_lt_exitTimeTrunc</code>) is adapted from MarkovProcess with Armstrong's copyright notice.</p><p><strong>If you use this work, please cite MarkovProcess (Scott Armstrong)</strong> as its CITATION.cff asks. The mathematics is classical; this is a machine-checked consumer of MarkovProcess, not a new theorem and not a general library.</p><p>The Lean source is the source at commit 1548828e63c86f2c3f360ac46ab91ec78ba45276, which the lower-tier and comparator receipts in <code>.lean-receipts/</code> cover. It was developed and verified with <a href=\"https://github.com/lean-pkg/lean-pkg\">lean-pkg</a> (doi:10.5281/zenodo.23272098).</p>",
+  "keywords": [
+    "Lean",
+    "mathlib",
+    "formal verification",
+    "Brownian motion",
+    "optional stopping",
+    "exit time",
+    "MarkovProcess"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/scottnarmstrong/MarkovProcess/tree/666cda029098a1106914fc9fa7abd1727573284a",
+      "relation": "requires",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/scottnarmstrong/MarkovProcess",
+      "relation": "isDerivedFrom",
+      "scheme": "url",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "10.5281/zenodo.23272098",
+      "relation": "isCompiledBy",
+      "scheme": "doi",
+      "resource_type": "software"
+    }
+  ],
+  "references": [
+    "Armstrong, Scott. MarkovProcess: sub-Markov kernel semigroups and continuous-path Markov processes in Lean 4. Software, Apache-2.0. https://github.com/scottnarmstrong/MarkovProcess",
+    "Chen, Le. lean-pkg: a registry and trust gate for Lean 4 formalization packages. Software. https://doi.org/10.5281/zenodo.23272098"
+  ],
+  "notes": "Built on Scott Armstrong's MarkovProcess (https://github.com/scottnarmstrong/MarkovProcess) at commit 666cda029098a1106914fc9fa7abd1727573284a; please cite MarkovProcess first. Receipts were made with lean-pkg 0.14.0 (doi:10.5281/zenodo.23445755)."
+}

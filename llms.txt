@@ -27,3 +27,4 @@
 
 - [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess): The library this pilot depends on, by Scott Armstrong.
 - [MarkovProcess citation](https://github.com/scottnarmstrong/MarkovProcess/blob/main/CITATION.cff): How to cite the library.
+- [Citation metadata](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/CITATION.cff): Preferred citation is MarkovProcess (Armstrong); the pilot itself is release v0.1.0.

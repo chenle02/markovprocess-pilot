@@ -8,6 +8,8 @@ namespace `MarkovProcessPilot`. Almost all of the mathematics comes from Scott
 Armstrong's [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess)
 library; the last section lists exactly what came from the library and what
 this pilot had to write.
+If you use this work, please cite MarkovProcess
+([how](../README.md#citing)).
 
 <p align="center">
   <img src="assets/exit-time.svg" width="640" alt="Diagram: a Brownian path starts at level x between levels a and b and is stopped at time T, the first time it touches b, which comes before the horizon K. Caption: under the law of Brownian motion started at x, the mean of the path at T is x.">

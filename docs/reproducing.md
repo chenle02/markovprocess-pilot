@@ -2,6 +2,13 @@
 
 [Back to README](../README.md) · [Proof outline](proof-outline.md)
 
+What you build here is mostly Scott Armstrong's
+[MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess) (about 250
+modules, compiled from source); the pilot is a small layer on top. If you use
+it, please cite MarkovProcess ([how](../README.md#citing)). The receipts
+were made with [lean-pkg](https://github.com/lean-pkg/lean-pkg)
+([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)).
+
 ## Dependencies and pins
 
 | Item | Pin |
