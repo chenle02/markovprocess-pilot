@@ -1,0 +1,34 @@
+commit: 1548828e63c86f2c3f360ac46ab91ec78ba45276
+lean-toolchain: leanprover/lean4:v4.35.0-rc2
+checker: verify.sh (lake build MarkovProcessPilot Audit.Exit.Solution Audit.Smoke.Solution Audit.BrownianKernel.Solution; lake env lean scripts/Axioms.lean; claim axioms)
+lean-pkg-build: begin
+✔ [9087/9092] Built MarkovProcessPilot.BrownianExit (1.7s)
+✔ [9088/9092] Built MarkovProcessPilot (1.1s)
+✔ [9090/9092] Built Audit.Smoke.Solution (2.7s)
+✔ [9091/9092] Built Audit.Exit.Solution (2.0s)
+✔ [9092/9092] Built Audit.BrownianKernel.Solution (2.0s)
+Build completed successfully (9092 jobs).
+lean-pkg-build: end
+'MarkovProcessPilot.hasIndepIncrements_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.isBrownianReal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.isBrownianReal_brownianMotion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.integral_eval_brownianMotion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.eval_exitTimeTrunc_mem_Icc' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.ae_eval_zero_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'MarkovProcessPilot.iteratedDeriv_two_cutId_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo : ∀ (a b x : ℝ),
+  a < x →
+    x < b →
+      ∀ (K : NNReal),
+        ∫ (ω : MarkovProcess.ContinuousPath ℝ),
+            ω (MarkovProcess.ContinuousPath.exitTimeTrunc (Set.Ioo a b) K ω) ∂MarkovProcess.brownianMotion x =
+          x
+@MarkovProcessPilot.isBrownianReal_iff : ∀ {Ω : Type u_1} [inst : MeasurableSpace Ω] (X : NNReal → Ω → ℝ)
+  (P : MeasureTheory.Measure Ω), MarkovProcess.IsBrownianReal X P ↔ ProbabilityTheory.IsBrownianReal X P
+claim-axioms: MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo Classical.choice,Quot.sound,propext
+claim-axioms: MarkovProcessPilot.isBrownianReal_brownianMotion Classical.choice,Quot.sound,propext
+claim-axioms-done: 2
+sorry-count: 0
+axioms: Classical.choice,Quot.sound,propext
+generated-at: 2026-10-18T04:08:51Z

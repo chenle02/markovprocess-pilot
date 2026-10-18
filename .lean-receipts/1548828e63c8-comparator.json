@@ -1,0 +1,130 @@
+{
+  "build_provenance": {
+    "cache_reused": 3,
+    "compiled": false,
+    "modules_built": 0,
+    "prebuilt": true,
+    "source": null
+  },
+  "commit": "1548828e63c86f2c3f360ac46ab91ec78ba45276",
+  "configs": [
+    {
+      "challenge_module": "Audit.BrownianKernel.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/1548828e63c8-comparator-comparator_config-brownian-kernel.log",
+      "log_sha256": "b252d3aef8672bfcb7a0f246a8a966d61d059a26d12e3d702eb73717345f3088",
+      "path": "comparator/config-brownian-kernel.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "8fefc7d91857c926cf03b0098d223e7acb3b6c48cdaa376d83cb001dd50664c7",
+      "solution_module": "Audit.BrownianKernel.Solution",
+      "theorem_names": [
+        "exists_unique_brownian_kernel"
+      ]
+    },
+    {
+      "challenge_module": "Audit.Exit.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/1548828e63c8-comparator-comparator_config-exit.log",
+      "log_sha256": "86ffe88830515bdb1b42ba100ad0d7f72eff01fa8e04efe0626123c3bf7f83d1",
+      "path": "comparator/config-exit.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "8f0d414845979d085ae971e60665dc0105135ead0d0a485fc424e85694441f21",
+      "solution_module": "Audit.Exit.Solution",
+      "theorem_names": [
+        "exit_mean"
+      ]
+    },
+    {
+      "challenge_module": "Audit.Smoke.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/1548828e63c8-comparator-comparator_config-smoke.log",
+      "log_sha256": "63a673a826d964eca01bf46276e4bb4ebe47a69e599a2f01417dfc482cfc017e",
+      "path": "comparator/config-smoke.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "360dd9e28d03dfc7849cc2b4618ca36fe4609f37fcc90b190c5e4d75e70c22c5",
+      "solution_module": "Audit.Smoke.Solution",
+      "theorem_names": [
+        "two_mul_le"
+      ]
+    }
+  ],
+  "generated_at": "2026-10-18T04:07:44+00:00",
+  "host": "h-2db2e0fa6029",
+  "host_label": "h-2db2e0fa6029",
+  "host_policy": "host h-2db2e0fa6029 listed in COMPARATOR_RECEIPT_ALLOWED_HOSTS",
+  "job_id": "local-h-2db2e0fa6029-2786423-20261018T040744Z",
+  "judges": 1,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 12,
+    "lake_manifest_sha256": "ab72e459cd29dce5fe5e21cc938651cb2bc10aa3cb5335e98635abe61ea87c9a",
+    "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "schema": "olean-manifest/1",
+    "sha256": "fafb49b3f0220a7c65d51203ec45af9aa7e1ab3793c9fb828b4c20973bcfe00d"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": 8192,
+    "source": "inherited"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "ok",
+      "wall_s": 18.666
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "ok",
+      "wall_s": 2.402
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "ok",
+      "wall_s": 3.392
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 343.112
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+11acb17 (Lean version 4.35.0-rc2)"
+  },
+  "tools": {
+    "con-ron_sha256": "4e5616d94374cae37324dad2594f6230c2bb2297240249fc78ff508f3bc5acef",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0-rc2",
+    "leanchecker_sha256": "9e36e955a251b1313c8eb5b7fa101282d51df109d34d8bb7c1cfdf51985aba29",
+    "leanexport_sha256": "c5bc1a10a21e22cbb3671d65987cdef2076833b14182d823ccb2153adf2fa954",
+    "nanoda_bin_sha256": "8241c5e6baa29490aa118d382f97961b208ae730fdb96545c2abed74c9ece5a8"
+  },
+  "unit_size": null
+}
