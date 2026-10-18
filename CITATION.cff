@@ -4,9 +4,10 @@ message: >-
   which did the hard part: the Brownian motion, exit times, the heat
   generator, optional stopping and Dynkin's formula. If you use it, please
   cite MarkovProcess (the preferred citation below). To refer to the pilot
-  itself, cite release v0.1.0 of this repository; its Lean source is the
-  source at commit 1548828e63c86f2c3f360ac46ab91ec78ba45276 that the receipts
-  cover (v0.1.0 changes documentation only).
+  itself, cite release v0.1.1 of this repository (doi:10.5281/zenodo.23452512);
+  its Lean source is the source at commit
+  1548828e63c86f2c3f360ac46ab91ec78ba45276 that the receipts cover (v0.1.1
+  changes documentation only).
 type: software
 title: "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time"
 abstract: >-
@@ -19,9 +20,17 @@ authors:
   - family-names: Chen
     given-names: Le
     affiliation: "Department of Mathematics and Statistics, Auburn University"
-version: "0.1.0"
+version: "0.1.1"
 date-released: "2026-10-18"
-commit: 6d9e1537036cb81f710aba1ada3aa97289a91f00
+commit: 1adfea7e35530ec8d3ba3f4ac4e7a0dd85020bf0
+doi: 10.5281/zenodo.23452511
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23452512
+    description: "Zenodo DOI of release v0.1.1 (this version)"
+  - type: doi
+    value: 10.5281/zenodo.23452511
+    description: "Zenodo concept DOI (all versions)"
 repository-code: "https://github.com/chenle02/markovprocess-pilot"
 license: Apache-2.0
 keywords:

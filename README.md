@@ -10,6 +10,7 @@
     <a href="https://github.com/scottnarmstrong/MarkovProcess"><img alt="Built on MarkovProcess by Scott Armstrong" src="https://img.shields.io/badge/built%20on-MarkovProcess%20(S.%20Armstrong)-3730a3"></a>
     <a href="lean-toolchain"><img alt="Lean version 4.35.0-rc2" src="https://img.shields.io/badge/Lean-v4.35.0--rc2-0f766e"></a>
     <a href="docs/reproducing.md#receipts"><img alt="Evidence: lower-tier and comparator receipts" src="https://img.shields.io/badge/evidence-comparator%20receipts-115e59"></a>
+    <a href="https://doi.org/10.5281/zenodo.23452512"><img alt="DOI 10.5281/zenodo.23452512" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23452512.svg"></a>
     <a href="LICENSE"><img alt="Apache-2.0 license" src="https://img.shields.io/badge/license-Apache--2.0-4338ca"></a>
     <a href="https://github.com/sponsors/chenle02"><img alt="Sponsor Le Chen on GitHub" src="https://img.shields.io/badge/sponsor-GitHub-be123c?logo=githubsponsors&amp;logoColor=white"></a>
   </p>
@@ -155,9 +156,12 @@ This repository's [`CITATION.cff`](CITATION.cff) names MarkovProcess as the
 preferred citation, so GitHub's "Cite this repository" button shows it, and
 lists it under `references` at the pinned commit `666cda029098`. To refer to
 the pilot itself, cite release
-[`v0.1.0`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.0); its
-Lean source is the source at commit `1548828e63c8` that the receipts cover
-(`v0.1.0` changes documentation only).
+[`v0.1.1`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.1),
+archived on Zenodo as
+[doi:10.5281/zenodo.23452512](https://doi.org/10.5281/zenodo.23452512)
+(all versions: [doi:10.5281/zenodo.23452511](https://doi.org/10.5281/zenodo.23452511));
+its Lean source is the source at commit `1548828e63c8` that the receipts cover
+(`v0.1.1` changes documentation only).
 
 ## Acknowledgments
 
