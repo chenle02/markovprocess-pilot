@@ -1,0 +1,8 @@
+{
+  "challenge_module": "Audit.BrownianKernel.Challenge",
+  "solution_module": "Audit.BrownianKernel.Solution",
+  "theorem_names": ["exists_unique_brownian_kernel"],
+  "definition_names": [],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}

@@ -64,6 +64,13 @@ Mathlib's Brownian API applies to it.
 stated in Mathlib's vocabulary only (any law on `C(ℝ≥0, ℝ)` that is Brownian
 started at `x`, with Mathlib's `hittingBtwn` as the stopping time), is
 exactly what [`Audit/Exit/Solution.lean`](Audit/Exit/Solution.lean) proves.
+The bridge is judged by `exists_unique_brownian_kernel` in
+[`Audit/BrownianKernel/Challenge.lean`](Audit/BrownianKernel/Challenge.lean):
+exactly one Markov kernel from `ℝ` to `C(ℝ≥0, ℝ)` has a recentred coordinate
+process that is `IsBrownianReal` at every starting point. A Mathlib-only
+statement cannot name the library's kernel, so the Solution proves this with
+`MarkovProcess.brownianMotion` as the witness. `claims.yaml` names the
+Challenge theorem that judges each claim (`judged_as`).
 
 > [!IMPORTANT]
 > **Scope.** The exit time is **truncated at `K`**. Untruncated exit times,
@@ -115,6 +122,7 @@ build: about 3.5 minutes on 4 cores and 1.5 GB peak memory per process
 | [`MarkovProcessPilot/BrownianExit.lean`](MarkovProcessPilot/BrownianExit.lean) | the bridge and the exit-time theorem |
 | [`MarkovProcessPilot.lean`](MarkovProcessPilot.lean) | umbrella import |
 | [`Audit/Exit/`](Audit/Exit/) | comparator statement (Mathlib only) and its proof |
+| [`Audit/BrownianKernel/`](Audit/BrownianKernel/) | comparator statement for the bridge (Mathlib only) and its proof |
 | [`Audit/Smoke/`](Audit/Smoke/), [`comparator/`](comparator/) | comparator smoke test and configurations |
 | [`scripts/Axioms.lean`](scripts/Axioms.lean) | `#print axioms` for the main declarations |
 | [`.lean-receipts/`](.lean-receipts/) | lower-tier and comparator receipts, bound to source commits |
