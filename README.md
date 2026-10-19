@@ -60,7 +60,7 @@
   the law of Brownian motion started at $x$ (`MarkovProcess.brownianMotion x`),
   and let $\tau_K$ be the exit time of the path from $(a, b)$, truncated at a
   deterministic horizon $K \ge 0$ (`exitTimeTrunc (Set.Ioo a b) K`). If
-  $a < x < b$, then $\int \omega(\tau_K(\omega))\,\mathbb{P}_x(d\omega) = x$.
+  $a < x < b$, then $`\int \omega(\tau_K(\omega))\,\mathbb{P}_x(d\omega) = x`$.
 
   ```lean
   theorem MarkovProcessPilot.integral_eval_exitTimeTrunc_Ioo
