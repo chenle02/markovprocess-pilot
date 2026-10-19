@@ -19,6 +19,7 @@
 
   <p>
     <a href="#what-is-proved"><strong>What is proved</strong></a>
+    · <a href="docs/what-is-proved.md">What is proved (for mathematicians)</a>
     · <a href="docs/reproducing.md">Verification and evidence</a>
     · <a href="#build-and-verify">Build</a>
     · <a href="docs/proof-outline.md">Proof outline</a>
@@ -89,7 +90,8 @@ statement cannot name the library's kernel, so the Solution proves this with
 `MarkovProcess.brownianMotion` as the witness. `claims.yaml` names the
 Challenge theorem that judges each claim (`judged_as`).
 
-The proof route is in [docs/proof-outline.md](docs/proof-outline.md); pins,
+The page [docs/what-is-proved.md](docs/what-is-proved.md) puts each result in mathematical
+notation beside its Lean statement, with the boundary. The proof route is in [docs/proof-outline.md](docs/proof-outline.md); pins,
 axioms and receipts are in [docs/reproducing.md](docs/reproducing.md).
 
 > [!IMPORTANT]
