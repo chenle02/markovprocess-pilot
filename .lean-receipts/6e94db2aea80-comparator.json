@@ -1,0 +1,143 @@
+{
+  "build_provenance": {
+    "cache_reused": 3,
+    "compiled": true,
+    "modules_built": 3,
+    "prebuilt": false,
+    "source": null
+  },
+  "commit": "6e94db2aea807cc4880fefe01a9ddde973bec770",
+  "configs": [
+    {
+      "challenge_module": "Audit.BrownianKernel.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/6e94db2aea80-comparator-comparator_config-brownian-kernel.log",
+      "log_sha256": "8c7474388aee168dc965c76ac796c68d109ef1226d183a8aaa28b5fc73294dd0",
+      "path": "comparator/config-brownian-kernel.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "8fefc7d91857c926cf03b0098d223e7acb3b6c48cdaa376d83cb001dd50664c7",
+      "solution_module": "Audit.BrownianKernel.Solution",
+      "theorem_names": [
+        "exists_unique_brownian_kernel"
+      ]
+    },
+    {
+      "challenge_module": "Audit.Exit.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/6e94db2aea80-comparator-comparator_config-exit.log",
+      "log_sha256": "8b4548a9e4c603a4db0d0e7c098e41142377fe92c992b2d9a59b0674c96d10db",
+      "path": "comparator/config-exit.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "8f0d414845979d085ae971e60665dc0105135ead0d0a485fc424e85694441f21",
+      "solution_module": "Audit.Exit.Solution",
+      "theorem_names": [
+        "exit_mean"
+      ]
+    },
+    {
+      "challenge_module": "Audit.Smoke.Challenge",
+      "definition_names": [],
+      "log": ".lean-receipts/6e94db2aea80-comparator-comparator_config-smoke.log",
+      "log_sha256": "be434fe0ea5700fdd19a5825c2d263ef9559e77ba01593b07fbc11e918ebc2fd",
+      "path": "comparator/config-smoke.json",
+      "permitted_axioms": [
+        "propext",
+        "Quot.sound",
+        "Classical.choice"
+      ],
+      "result": "pass",
+      "sha256": "360dd9e28d03dfc7849cc2b4618ca36fe4609f37fcc90b190c5e4d75e70c22c5",
+      "solution_module": "Audit.Smoke.Solution",
+      "theorem_names": [
+        "two_mul_le"
+      ]
+    }
+  ],
+  "generated_at": "2026-11-07T03:14:06+00:00",
+  "host": "h-f985343177f7",
+  "host_label": "h-f985343177f7",
+  "host_policy": "host h-f985343177f7: the machine running the command (workstation default: no Slurm here, COMPARATOR_RECEIPT_ALLOWED_HOSTS unset)",
+  "job_id": "local-h-f985343177f7-3709985-20261107T031406Z",
+  "judges": 1,
+  "lean_threads": null,
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mechanism": "toolchain",
+  "olean_manifest": {
+    "captured": "build",
+    "files": 12,
+    "lake_manifest_sha256": "c137fb1867999a66643eda325e1645519b3f52fcd413275108e065aa6dc8cc51",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "schema": "olean-manifest/1",
+    "sha256": "b7bf68925a9ad8537f27706f3f13edabdaabe68f109c87262267bdcec24533a5"
+  },
+  "producer": {
+    "bytecode_files": 82,
+    "bytecode_sha256": "0f9f6d4145b71a76bc060dfc78275bc04bf704d7ca452c80ec2a316fca10fdda",
+    "bytecode_tag": "cpython-312",
+    "commit": null,
+    "dirty": null,
+    "install": "installed",
+    "lean_pkg": "0.26.0",
+    "other_bytecode_files": 0,
+    "python": "3.12.3",
+    "source_files": 97,
+    "sources_sha256": "d402a48002898b79fbe4e64f679670d74710a6e4d4465e517693c8ad477fdf5e"
+  },
+  "result": "pass",
+  "schema": "comparator-receipt/2",
+  "stack_limit": {
+    "hard_kb": "unlimited",
+    "soft_kb": 8192,
+    "source": "inherited"
+  },
+  "stages": [
+    {
+      "exit": 0,
+      "stage": "checkout",
+      "status": "ok",
+      "wall_s": 25.042
+    },
+    {
+      "exit": 0,
+      "stage": "cache-get",
+      "status": "ok",
+      "wall_s": 3.803
+    },
+    {
+      "exit": 0,
+      "stage": "build",
+      "status": "ok",
+      "wall_s": 10.1
+    },
+    {
+      "exit": 0,
+      "stage": "comparator",
+      "status": "ok",
+      "wall_s": 419.938
+    }
+  ],
+  "toolchain_resolution": {
+    "lake": "<elan>/bin/lake",
+    "source": "elan",
+    "version": "Lake version 5.0.0-src+eb6cafb (Lean version 4.35.0)"
+  },
+  "tools": {
+    "con-ron_sha256": "60f4ca9fb9436c323789fa49aae33af6dcd1b9b54b43a66b461779ce79fd8eec",
+    "lake_sha256": "8ba83c98f76562d03b8dbc33f1057151ba6cbb121679dde76b2260ccc90495e1",
+    "lean_toolchain": "leanprover/lean4:v4.35.0",
+    "leanchecker_sha256": "12c38901cdbfab178f1bf6145dd30012e9a3b2c11ca695292a5884fa3cbaddb6",
+    "leanexport_sha256": "f6a6483d518a11b323c28b9bac176d2220df0e9fc3230833815db9586669c074",
+    "nanoda_bin_sha256": "cbf13950fc4a48f635a0beceeb5ed32dd82568b870cfd081b6391c1f2cf02ba5"
+  },
+  "unit_size": null
+}
