@@ -46,12 +46,12 @@ theorem integral_eval_brownianMotion (x : ℝ) (t : ℝ≥0) :
   Mathlib's `IsPreBrownianReal.hasLaw_eval` and
   `IsPreBrownianReal.hasIndepIncrements`.
 
-A note on the library at its pinned revision: the docstring of
-`MarkovProcess/Examples/BrownianMotion.lean` says Mathlib's
-`HasIndepIncrements` and `IsBrownianReal` are "not available at the pinned
-revision". At the Mathlib commit the library actually resolves to
-(`065356127b1d`) both exist, and this file compiles against them. The
-docstring is simply older than the Mathlib pin.
+A note on the library's history: at the earlier pin `666cda029098`, the docstring
+of `MarkovProcess/Examples/BrownianMotion.lean` said Mathlib's
+`HasIndepIncrements` and `IsBrownianReal` were "not available at the pinned
+revision", although both existed at the Mathlib commit the library resolved to
+(`065356127b1d`). At the current pin `2486404` (Mathlib `56a005855ea1`) the
+docstring no longer says so, and this file compiles against both.
 
 ## Part (b): optional stopping at a truncated exit time
 

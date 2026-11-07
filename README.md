@@ -8,7 +8,7 @@
   <p>
     <a href="https://github.com/chenle02/markovprocess-pilot/actions/workflows/ci.yml"><img alt="Lean CI status" src="https://github.com/chenle02/markovprocess-pilot/actions/workflows/ci.yml/badge.svg"></a>
     <a href="https://github.com/scottnarmstrong/MarkovProcess"><img alt="Built on MarkovProcess by Scott Armstrong" src="https://img.shields.io/badge/built%20on-MarkovProcess%20(S.%20Armstrong)-3730a3"></a>
-    <a href="lean-toolchain"><img alt="Lean version 4.35.0-rc2" src="https://img.shields.io/badge/Lean-v4.35.0--rc2-0f766e"></a>
+    <a href="lean-toolchain"><img alt="Lean version 4.35.0" src="https://img.shields.io/badge/Lean-v4.35.0-0f766e"></a>
     <a href="docs/reproducing.md#receipts"><img alt="Evidence: lower-tier and comparator receipts" src="https://img.shields.io/badge/evidence-comparator%20receipts-115e59"></a>
     <a href="https://doi.org/10.5281/zenodo.23452512"><img alt="DOI 10.5281/zenodo.23452512" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23452512.svg"></a>
     <a href="LICENSE"><img alt="Apache-2.0 license" src="https://img.shields.io/badge/license-Apache--2.0-4338ca"></a>
@@ -92,12 +92,12 @@ Challenge theorem that judges each claim (`judged_as`).
 
 | Check | Status |
 |---|---|
-| Build | `lake build` green at Lean `v4.35.0-rc2`, Mathlib `065356127b1d` |
+| Build | `lake build` green at Lean `v4.35.0`, Mathlib `56a005855ea1`, MarkovProcess [`2486404`](https://github.com/scottnarmstrong/MarkovProcess/tree/2486404169c10c774164626503aba4ed7c1f0da5) (its `main` on 2026-11-04) |
 | Placeholders | no `sorry`, `admit`, custom `axiom` or `native_decide` in `MarkovProcessPilot/` |
 | Axioms | `propext`, `Classical.choice`, `Quot.sound` only ([`logs/axioms.txt`](logs/axioms.txt)) |
 | Comparator | `pass`, toolchain mechanism; con-ron, NanoDa and Lean kernels |
-| Receipts | [`.lean-receipts/`](.lean-receipts/), bound to commit [`1548828e63c8`](https://github.com/chenle02/markovprocess-pilot/tree/1548828e63c86f2c3f360ac46ab91ec78ba45276) |
-| Index | listed in the lean-pkg package index at that pin, trust level `comparator` |
+| Receipts | [`.lean-receipts/`](.lean-receipts/), bound to commit [`6e94db2aea80`](https://github.com/chenle02/markovprocess-pilot/tree/6e94db2aea807cc4880fefe01a9ddde973bec770) |
+| Index | listed in the lean-pkg package index at the previous pin `1548828e63c8`, trust level `comparator` |
 
 ## Quick start
 
@@ -168,7 +168,7 @@ its Lean source is the source at commit `1548828e63c8` that the receipts cover
 The mathematics formalised here, and nearly all of the Lean, come from Scott
 Armstrong's [MarkovProcess](https://github.com/scottnarmstrong/MarkovProcess).
 Mathlib supplies the Brownian-motion API used by the bridge.
-Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)); the receipts were made with lean-pkg 0.14.0 ([doi:10.5281/zenodo.23445755](https://doi.org/10.5281/zenodo.23445755)).
+Developed and verified with [lean-pkg](https://github.com/lean-pkg/lean-pkg) ([doi:10.5281/zenodo.23272098](https://doi.org/10.5281/zenodo.23272098)); the current receipts were made with lean-pkg 0.26.0 ([doi:10.5281/zenodo.24025862](https://doi.org/10.5281/zenodo.24025862)), the earlier ones with lean-pkg 0.14.0 ([doi:10.5281/zenodo.23445755](https://doi.org/10.5281/zenodo.23445755)).
 
 ## Support
 
