@@ -4,10 +4,11 @@ message: >-
   which did the hard part: the Brownian motion, exit times, the heat
   generator, optional stopping and Dynkin's formula. If you use it, please
   cite MarkovProcess (the preferred citation below). To refer to the pilot
-  itself, cite release v0.1.2 of this repository (all versions:
-  doi:10.5281/zenodo.23452511); its Lean source is the source at commit
+  itself, cite release v0.1.2 of this repository (doi:10.5281/zenodo.24026993; concept DOI
+  for v0.1.2 and later: doi:10.5281/zenodo.24026992); its Lean source is the source at commit
   6e94db2aea807cc4880fefe01a9ddde973bec770 that the receipts cover. v0.1.2 moves
-  MarkovProcess to 2486404 and Lean to v4.35.0.
+  MarkovProcess to 2486404 and Lean to v4.35.0. Releases v0.1.0 and v0.1.1
+  form an earlier Zenodo record family (concept doi:10.5281/zenodo.23452511).
 type: software
 title: "MarkovProcess consumer pilot: optional stopping for Brownian motion at a truncated exit time"
 abstract: >-
@@ -22,14 +23,21 @@ authors:
     affiliation: "Department of Mathematics and Statistics, Auburn University"
 version: "0.1.2"
 date-released: "2026-11-07"
-doi: 10.5281/zenodo.23452511
+commit: 9818893edfc7324c64fef25d33d77d40e398aea3
+doi: 10.5281/zenodo.24026992
 identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24026993
+    description: "Zenodo DOI of release v0.1.2 (this version)"
+  - type: doi
+    value: 10.5281/zenodo.24026992
+    description: "Zenodo concept DOI from v0.1.2 on (all later versions)"
   - type: doi
     value: 10.5281/zenodo.23452512
     description: "Zenodo DOI of release v0.1.1 (previous version)"
   - type: doi
     value: 10.5281/zenodo.23452511
-    description: "Zenodo concept DOI (all versions)"
+    description: "Zenodo concept DOI of the earlier record family (v0.1.0 and v0.1.1)"
 repository-code: "https://github.com/chenle02/markovprocess-pilot"
 license: Apache-2.0
 keywords:
