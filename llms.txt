@@ -4,7 +4,7 @@
 
 ## Essential
 
-- [README](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/README.md): Result, scope, status and quick start.
+- [README](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/README.md): What is proved, scope, build, trust and axioms, and how to cite.
 - [Repository contract](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/AGENTS.md): Which files are bound to receipts, and the rules for changes.
 - [Machine-readable claims](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/claims.yaml): The two claimed theorems (schema claims/1).
 - [Proof outline](https://raw.githubusercontent.com/chenle02/markovprocess-pilot/main/docs/proof-outline.md): Dynkin's formula route, the comparator statement, and what came from MarkovProcess.
