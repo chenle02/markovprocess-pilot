@@ -1,0 +1,7 @@
+# Public on purpose (decided by Le Chen, 2026-11-07).
+# `home-workstation` is a descriptive label, not a machine name: the comparator receipts of 2026-10-08
+# (05d99d75df82-comparator.json, 9bb873e7aa31-comparator.json, before host labels existed) named their host
+# with it, and commit 69dcb28 relabelled them to the hashed label h-24e00fc5da6c. The old versions stay in
+# history, and the label also appears in the lower-tier receipts of that day, in the tree and in the
+# Zenodo archives of v0.1.0-v0.1.2. No real host name or home path is in the history, so it is not rewritten.
+allow: home-workstation
