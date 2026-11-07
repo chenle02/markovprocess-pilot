@@ -11,8 +11,8 @@
     <a href="lean-toolchain"><img alt="Lean version 4.35.0" src="https://img.shields.io/badge/Lean-v4.35.0-0f766e"></a>
     <a href="https://github.com/leanprover-community/mathlib4/tree/56a005855ea17e0b0958f73ec801ae140b0a1679"><img alt="Mathlib commit 56a0058" src="https://img.shields.io/badge/Mathlib-56a0058-0f766e"></a>
     <a href="docs/reproducing.md#receipts"><img alt="Evidence: lower-tier and comparator receipts" src="https://img.shields.io/badge/evidence-comparator%20receipts-115e59"></a>
-    <a href="https://github.com/chenle02/markovprocess-pilot/releases/tag/v0.1.1"><img alt="Release v0.1.1" src="https://img.shields.io/badge/release-v0.1.1-4338ca"></a>
-    <a href="https://doi.org/10.5281/zenodo.23452512"><img alt="DOI 10.5281/zenodo.23452512" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23452512.svg"></a>
+    <a href="https://github.com/chenle02/markovprocess-pilot/releases/tag/v0.1.2"><img alt="Release v0.1.2" src="https://img.shields.io/badge/release-v0.1.2-4338ca"></a>
+    <a href="https://doi.org/10.5281/zenodo.23452511"><img alt="DOI 10.5281/zenodo.23452511 (all versions)" src="https://zenodo.org/badge/DOI/10.5281/zenodo.23452511.svg"></a>
     <a href="LICENSE"><img alt="Apache-2.0 license" src="https://img.shields.io/badge/license-Apache--2.0-4338ca"></a>
     <a href="https://github.com/sponsors/chenle02"><img alt="Sponsor Le Chen on GitHub" src="https://img.shields.io/badge/sponsor-GitHub-be123c?logo=githubsponsors&amp;logoColor=white"></a>
   </p>
@@ -109,7 +109,7 @@ Standalone library; there is no accompanying paper. It is based on:
   continuous-path Markov processes in Lean 4.* Software, Apache-2.0.
   <https://github.com/scottnarmstrong/MarkovProcess>, used at commit
   [`2486404`](https://github.com/scottnarmstrong/MarkovProcess/tree/2486404169c10c774164626503aba4ed7c1f0da5)
-  (its `main` on 2026-11-04; release `v0.1.1` used `666cda029098`).
+  (its `main` on 2026-11-04, from release `v0.1.2`; `v0.1.1` and earlier used `666cda029098`).
   It supplies the Brownian motion, exit times, the heat generator, optional
   stopping and Dynkin's formula.
 - [Mathlib](https://github.com/leanprover-community/mathlib4), for the
@@ -146,12 +146,12 @@ To use the pilot from another Lake project:
 [[require]]
 name = "MarkovProcessPilot"
 git = "https://github.com/chenle02/markovprocess-pilot.git"
-rev = "v0.1.1"
+rev = "v0.1.2"
 ```
 
 then `import MarkovProcessPilot`. This also brings in MarkovProcess at the
 pinned commit; the consuming project must use the same Lean toolchain,
-`leanprover/lean4:v4.35.0-rc2`.
+`leanprover/lean4:v4.35.0`.
 
 ## Trust and axioms
 
@@ -237,14 +237,15 @@ asks:
 
 This repository's [`CITATION.cff`](CITATION.cff) names MarkovProcess as the
 preferred citation, so GitHub's "Cite this repository" button shows it, and
-lists it under `references` at the pinned commit `666cda029098`. To refer to
+lists it under `references` at the pinned commit `2486404`. To refer to
 the pilot itself, cite release
-[`v0.1.1`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.1),
-archived on Zenodo as
-[doi:10.5281/zenodo.23452512](https://doi.org/10.5281/zenodo.23452512)
+[`v0.1.2`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.2)
 (all versions: [doi:10.5281/zenodo.23452511](https://doi.org/10.5281/zenodo.23452511));
-its Lean source is the source at commit `1548828e63c8` that the earlier receipts cover
-(`v0.1.1` changes documentation only).
+its Lean source is the source at commit `6e94db2aea80` that the receipts cover.
+`v0.1.2` moves MarkovProcess to `2486404` and Lean to `v4.35.0`; the earlier
+release [`v0.1.1`](https://github.com/chenle02/markovprocess-pilot/tree/v0.1.1)
+([doi:10.5281/zenodo.23452512](https://doi.org/10.5281/zenodo.23452512)) used
+MarkovProcess `666cda029098`, Lean `v4.35.0-rc2`, source `1548828e63c8`.
 
 ## Acknowledgments
 
