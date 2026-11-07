@@ -8,7 +8,7 @@ relaxedAutoImplicit = false
 [[require]]
 name = "MarkovProcess"
 git = "https://github.com/scottnarmstrong/MarkovProcess.git"
-rev = "666cda029098a1106914fc9fa7abd1727573284a"
+rev = "2486404169c10c774164626503aba4ed7c1f0da5"
 
 [[lean_lib]]
 name = "MarkovProcessPilot"
